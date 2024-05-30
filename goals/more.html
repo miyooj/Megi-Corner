@@ -4,10 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" href="assets/pictures/logo.png">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="icon" href="/assets/pictures/logo.png">
     <title>MEGI's Corner</title>
-    <script src="assets/javascript/main.js"></script>
+
+    <script>
+        const body = document.querySelector('body');
+        const imgContainer = document.createElement('div');
+
+        function displayImg(imgUrl, elt) {
+            body.appendChild(imgContainer);
+
+            imgContainer.innerHTML = `<img src='${imgUrl}'>`;
+
+            imgContainer.classList.add('displayMe');
+
+            imgContainer.style.top = (elt.offsetTop + 40) + 'px';
+
+            imgContainer.style.top = elt.offsetLeft + 'px';
+    
+        }
+    </script>
+
     <style>
         body {
             font-family: Poppins;
@@ -23,7 +41,6 @@
 
         .box2 {
             display: block;
-            border: 2px black solid;
         }
 
         .box2 h2{
@@ -37,13 +54,12 @@
         .box3 {
             display: block;
             border-radius: 50px;
-            border: 2px black solid;
             margin-top: 40px;
             background-color: white;
         }
 
         .box2 h3{
-            margin-top: 50px;
+            margin-top: 10px;
             margin-left: 250px;
             margin-right: 250px;
             text-align: center;
@@ -61,8 +77,8 @@
             text-align: justify;
             font-family: Poppins;
             color: black;
-            font-size: 20px;
-            font-weight: 800;
+            font-size: 18px;
+            font-weight: 420;
         }
 
         .back-button img{
@@ -107,8 +123,11 @@
             display: inline-block;
         }
 
-        .text-text{
-            width: 92%;
+        .text-text p span{
+            text-decoration: underline;
+            margin-left: 4px;
+            font-weight: bold;
+            cursor: pointer;
         }
 
         .text-speak{
@@ -118,9 +137,49 @@
         }
 
         .pano-image {
-            width: 100%;
-            height: 600px;
+            margin-left: 340px;
         }
+
+        .hover-text {
+            text-decoration: underline;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .hover-card img, .hover-card video, .hover-card audio{
+            max-width: 500px;
+            max-height: 500px;
+            margin-left: -1px;
+        }
+
+        .hover-text span.hover-card {
+            display: none;
+        }
+
+        .hover-text:hover span.hover-card {
+            display: flex;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            border: 1px solid blue;
+            padding: 8px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 2px 2px 4px 4px gray;
+            z-index: 50;
+            transition: ease-in-out .05s;
+        }
+
+        .hover-text {
+            position: relative;
+            margin-left: 4px;
+        }
+
+        .hover-text:hover {
+            text-decoration: none;
+        }
+
     </style>
 </head>
 
@@ -140,10 +199,10 @@
     <div class="box1">
         <div class="buttons">
             <div class="back-button">
-                <a href="goals.html"><img src="assets/pictures/back.png" alt=""></a>
+                <a href="goals.html"><img src="/assets/pictures/back.png" alt=""></a>
                 <p>What is RA11650</p>
                 <br>
-                <h3>1 min | by Megi</h3>
+                <h3>5 mins | by Megi</h3>
             </div>
         </div>
     </div>
@@ -151,17 +210,118 @@
     <div class="box2">
         <h2>Become Me</h2>
         <div class="pano-image">
-
+            <iframe
+                src="https://momento360.com/e/u/0c321c1836a84a7fafc3f9b675a928c7?utm_campaign=embed&utm_source=other&heading=43&pitch=4.24&field-of-view=100&size=medium&display-plan=true"
+                frameborder="0" width="1080px" height="550px">
+            </iframe>
         </div>
         <h3>It's really hard to be alone, especially when people around you are accompanied by others. Being me has peace but is boring. right?</h3>
     </div>
 
     <div class="box3">
         <div class="text-text"> 
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, odit incidunt ut dolor impedit, laudantium officiis voluptate illum ipsum odio, delectus cupiditate qui voluptas facere? Nesciunt cupiditate ipsum accusantium odio!</p>
-        </div>
-        <div class="text-speak"> 
-            <button>SPEECH</button>
+            <p>
+                Inclusive education in the Philippines, as mandated by the Republic Act 11650, is a significant step towards ensuring that every Filipino child, 
+                regardless of their background or abilities, has access to
+                <a class="hover-text">quality education
+                    <span class="hover-card">
+                        <img src="/assets/pictures/quality education.png">
+                    </span>
+                </a>
+                . This law emphasizes the right of every individual to receive an education that serves diverse needs, promoting a more inclusive and equitable society.
+            </p>
+
+            <p>
+                The importance of inclusive education for me shall not limit the benefit of students with disabilities by providing them with the necessary support, 
+                it also requires accommodations to succeed in a conventional educational setting but also enriches the learning environment for all students. 
+                Inclusive education
+                <a class="hover-text">nurtures
+                    <span class="hover-card">
+                        <audio src="/assets/audios/mat audio clip/nurture.mp3" controls>
+                    </span>
+                </a>
+                empathy, understanding, and respect for diversity, preparing students to become compassionate and inclusive members of society.
+            </p>
+
+            <p>
+                As I have read in the articles, our country is making commendable progress towards inclusive education through various initiatives and programs.
+                <a class="hover-text">The Department of Education
+                    <span class="hover-card">
+                        <audio src="/assets/audios/mat audio clip/deped.mp3" controls>
+                    </span>
+                </a>
+                has been implementing inclusive education policies and guidelines to support learners with special needs. 
+                The organization provides training programs for teachers and school administrators to equip them with the knowledge and skills to effectively support
+                <a class="hover-text">diverse learners
+                    <span class="hover-card">
+                        <img src="/assets/pictures/diverse learners.png">
+                    </span>
+                </a>
+                in the classroom.
+            </p>
+
+            <p>
+                In rural areas of the Philippines, where access to resources and support services may be limited, the implementation of inclusive education faces unique challenges. 
+                These are several strategies that I came up into that can be employed to promote inclusive education in rural communities:
+            </p>
+
+            <p>
+                > 
+                <a class="hover-text">Community Engagement
+                    <span class="hover-card">
+                        <video src="/assets/videos/animation/community engagement.mp4" controls autoplay muted>
+                        </video>
+                    </span>
+                </a>
+                . 
+                Engaging parents, community leaders, and local government is important in promoting awareness and support for inclusive education. 
+                Moreover, building partnerships with community organizations can help in providing additional resources and support for students with disabilities.
+            </p>
+
+            <p>
+                > 
+                <a class="hover-text">Teacher Training
+                    <span class="hover-card">
+                        <video src="/assets/videos/teacher training.mp4" controls autoplay muted>
+                        </video>
+                    </span>
+                </a>
+                . 
+                Providing specialized training and professional development opportunities for teachers in rural areas is essential. 
+                Making sure teachers have the necessary skills to address the diverse needs of students will enhance the quality of education provided in inclusive settings.
+            </p>
+
+            <p>
+                > 
+                <a class="hover-text">Infrastructure and Resources
+                    <span class="hover-card">
+                        <video src="/assets/videos/animation/infrastructure and resources.mp4" controls autoplay muted>
+                        </video>
+                    </span>
+                </a>
+                . 
+                Ensuring that schools in rural areas are equipped with the necessary infrastructure, assistive devices, and resources to support students with disabilities is vital. 
+                In addition, access to inclusive learning materials and technologies can enhance the learning experience for all students.
+            </p>
+
+            <p>
+                > Promotion of Inclusive Practices. Promoting a culture of inclusivity and diversity within schools and communities is also important. 
+                Accepting differences, cultivating a sense of belonging, and creating a supportive environment for all students can contribute to the success of inclusive education in rural areas.
+            </p>
+
+            <p>
+                In conclusion, RA 11650, is a vital step towards creating a more inclusive and 
+                <a class="hover-text">equitable education system
+                    <span class="hover-card">
+                        <video src="/assets/videos/ees.mp4" controls autoplay muted>
+                        </video>
+                    </span>
+                </a> 
+
+                . By prioritizing the needs of diverse learners, promoting awareness and support for inclusive education, and implementing strategies tailored to rural areas, 
+                the Philippines can make significant progress towards ensuring that every child has access to quality education, regardless of their background or abilities.
+
+            </p>
         </div>
     </div>
 </body>
