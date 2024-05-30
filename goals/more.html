@@ -4,94 +4,124 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="icon" href="/assets/pictures/logo.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/pictures/logo.png">
     <title>MEGI's Corner</title>
+    <script src="assets/javascript/main.js"></script>
     <style>
         body {
             font-family: Poppins;
             color: black;
             margin-top: 200px;
             margin-right: 45px;
-            background-color: #3d583d;
+            background-color: #231f20;
         }
 
         .box1 {
-            width: 20%;
-            display: inline-block;
-            vertical-align: top;
+            display: block;
         }
 
         .box2 {
-            width: 78%;
-            display: inline-block;
+            display: block;
+            border: 2px black solid;
         }
 
-        .title-text h2{
-            font-family: Playfair Display;
-            font-size: 50px;
-            font-weight: 1;
-            color: white;
-            font-style: italic;
+        .box2 h2{
             text-align: center;
+            font-family: Playfair Display;
+            color: white;
+            font-size: 50px;
+            font-style: italic;
+        }
 
+        .box3 {
+            display: block;
+            border-radius: 50px;
+            border: 2px black solid;
+            margin-top: 40px;
+            background-color: white;
+        }
+
+        .box2 h3{
+            margin-top: 50px;
+            margin-left: 250px;
+            margin-right: 250px;
+            text-align: center;
+            font-family: Playfair Display;
+            color: white;
+            font-size: 30px;
+            font-style: italic;
+        }
+
+        .box3 p{
+            border: 10px white solid;
+            padding: 10px;
+            border-radius: 30px;
+            background-color: white;
+            text-align: justify;
+            font-family: Poppins;
+            color: black;
+            font-size: 20px;
+            font-weight: 800;
         }
 
         .back-button img{
             width: 100px;
-            margin-left: -50px
-        }
-
-        .transcript-button {
-            margin-top: 30px;
-            font-size: 25px;
-            width: auto;
-            background-color: rgba(61, 87, 61, .5);
-            border-radius: 50px;
-            padding-top: 25px;
-            padding-bottom: 25px;
-            padding-left: 100px;
-            padding-right: 100px;
-            border-style: none;
-            cursor: pointer;
+            margin-left: -30px
         }
 
         .back-button{
-            margin-bottom: 180px;
+            margin-bottom: 50px;
+            padding: 10px;
         }
 
-        .goals-buttons button {
-            text-decoration: none;
-            font-family: Poppins;
+        .back-button a{
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .back-button p{
+            display: inline-block;
+            vertical-align: top;
+            font-size: 60px;
+            font-family: Playfair Display;
+            color: white;
+            font-style: italic;
+            font-weight: 1;
+            margin-left: -15px;
+            margin-top: -11px;
+
+        }
+
+        .back-button h3{
+            font-family: Playfair Display;
             font-size: 30px;
             color: white;
-            background-color: #7ed957;
-            border: none;
-            border-radius: 30px;
-            padding: 10px;
-            margin-top: 10px;
+            margin-left: 80px;
+            margin-top: 0px;
+            font-style: italic;
+
         }
 
-        .goals-buttons a{
-            text-decoration: none;
-            color: white;
-            margin-left: 0px;
+        .text-text, .text-speak {
+            display: inline-block;
         }
-        
-        .title-videos video {
+
+        .text-text{
+            width: 92%;
+        }
+
+        .text-speak{
+            align-content: center;
+            justify-content: center;
             vertical-align: middle;
-            width: 1080px;
-            object-fit: contain;
-            border-radius: 50px;
         }
 
-        .title-videos {
-            margin-left: 138px;
-            margin-bottom: 50px;
+        .pano-image {
+            width: 100%;
+            height: 600px;
         }
-
     </style>
-
 </head>
 
 <body>
@@ -110,38 +140,29 @@
     <div class="box1">
         <div class="buttons">
             <div class="back-button">
-                <a href="goals.html"><img src="/assets/pictures/back.png" alt=""></a>
-                <p>Transcript</p>
-            </div>
-            <div class="goals-buttons">
-                <button><a href="transcript.html">TRANSCRIPT</a></button>
-            </div>
-            <div class="goals-buttons">
-                <button><a href="narrative.html">NARRATIVE</a></button>
-            </div>
-            <div class="goals-buttons">
-                <button><a href="more.html">MORE ABOUT THIS...</a></button>
+                <a href="goals.html"><img src="assets/pictures/back.png" alt=""></a>
+                <p>What is RA11650</p>
+                <br>
+                <h3>1 min | by Megi</h3>
             </div>
         </div>
     </div>
 
     <div class="box2">
-        <div class="contents">
-            <div class="title-text">
-                <h2>Is the standard among varieties equitable?</h2>
-            </div>
-            <div class="title-videos">
-                <video controls>
-                    <source src="/assets/videos/video1.mp4">
-                </video>
-            </div>
+        <h2>Become Me</h2>
+        <div class="pano-image">
+
         </div>
+        <h3>It's really hard to be alone, especially when people around you are accompanied by others. Being me has peace but is boring. right?</h3>
     </div>
 
+    <div class="box3">
+        <div class="text-text"> 
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, odit incidunt ut dolor impedit, laudantium officiis voluptate illum ipsum odio, delectus cupiditate qui voluptas facere? Nesciunt cupiditate ipsum accusantium odio!</p>
+        </div>
+        <div class="text-speak"> 
+            <button>SPEECH</button>
+        </div>
+    </div>
 </body>
 </html>
-
-
-<!-- https://youtu.be/G3e-cpL7ofc?t=11275 -->
-<!-- https://www.youtube.com/watch?v=f3uCSh6LIY0
-https://www.youtube.com/watch?v=U8smiWQ8Seg -->
