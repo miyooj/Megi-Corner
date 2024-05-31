@@ -25,13 +25,11 @@
             display: inline-block;
             vertical-align: top;
             margin-top: 110px;
-            border: 2px black solid;
         }
 
         .box3 {
             width: 78%;
             display: inline-block;
-            border: 2px black solid;
         }
 
         .back-button img{
@@ -101,18 +99,22 @@
 
         .content-videos video {
             width: 950px;
-            margin-right: 60px;
+        }
+
+        .video1 {
+            width: 70%;
         }
 
         .content-video-stamps {
-            display: inline-block;
-            width: 16%;
+            width: 25%;
+            margin-top: 65px;
+            margin-left: -4px;
         }
 
         .timestamp-button button {
             display: inline-block;
             font-size: 25px;
-            padding: 10px;
+            padding: 15px;
             border-radius: 55px;
             border: none;
             padding-left: 25px;
@@ -121,9 +123,8 @@
 
         .timestamp-button {
             display: inline-block;
-            padding: 15px;
-            /* border: 2px black solid; */
-            margin-right: 10px;
+            padding: 10px;
+            margin-right: 60px;
             width: 90px;
         }
 
@@ -132,14 +133,49 @@
             border-radius: 50px;
             padding: 10px;
         }
+
+        .video-transcript p{
+            font-family: Poppins;
+            text-align: center;
+            font-size: 25px;
+        }
+
     </style>
 
     <script type="text/javascript">
-        function change_text()
-        {
-            document.getElementById("text-box").innerHTML="Test"
+        function changeTxt(num) {
+            if (num == 1){
+                document.getElementById("text-box").innerHTML="We all know that we have different abilities and dreams, and in order to achieve those dreams, we need to pursue them, right?";
+                document.getElementById("e-video").src='../assets/videos/transcript/1a.mp4'
+            } else if (num == 2){
+                document.getElementById("text-box").innerHTML="Kindness was just as rare as a green shooting star...";
+                document.getElementById("e-video").src='../assets/videos/transcript/2a.mp4'
+            } else if (num == 3){
+                document.getElementById("text-box").innerHTML="...and there is someone who is probably a green shooting star.";
+                document.getElementById("e-video").src='../assets/videos/transcript/3a.mp4'
+            } else if (num == 4){
+                document.getElementById("text-box").innerHTML="In their minds, they knew that everything would be tough as rock...";
+                document.getElementById("e-video").src='../assets/videos/transcript/4a.mp4'
+            } else if (num == 5){
+                document.getElementById("text-box").innerHTML="...hoping that their journey will be as bright and amazing as a shooting star.";
+                document.getElementById("e-video").src='../assets/videos/transcript/5a.mp4'
+            } else if (num == 6){
+                document.getElementById("text-box").innerHTML="The first day of school is the scariest day that some of us have to face. We have no idea who the strangers are that we are going to be with in a room. What are the chances that they might hate who we are based on our physical appearance and personalities?";
+                document.getElementById("e-video").src='../assets/videos/transcript/6a.mp4'
+            } else if (num == 7){
+                document.getElementById("text-box").innerHTML="Every student should feel like they belong, but why does it not feel welcome, as some will stare, and from our perspective, we are overthinking how they are judging me in such ways?";
+                document.getElementById("e-video").src='../assets/videos/transcript/7a.mp4'
+            } else if (num == 8){
+                document.getElementById("text-box").innerHTML="Why does this matter? Undeterred, instead of backing out, we need to push ourselves and encourage ourselves to go closer, hoping to join a group.";
+                document.getElementById("e-video").src='../assets/videos/transcript/8a.mp4'
+            } else if (num == 9){
+                document.getElementById("text-box").innerHTML='Diversity sticks to the words "acceptance" and "respect." It means understanding that every individual is unique in our own differences. That makes us special. Diversity is also the reason why some schools are pushing inclusive education so that no one will be left behind. As a future educator, it will be challenging to face students who will challenge our patience and who will give challenges to their other classmates.';
+                document.getElementById("e-video").src='../assets/videos/transcript/9a.mp4'
+            } else if (num == 10){
+                document.getElementById("text-box").innerHTML="Again, why does this matter? Well, when we embrace diversity, we're not just being nice; we're also helping everyone learn better. Having a diverse group of different people in our classrooms helps us all see things from different angles and learn from each other.";
+                document.getElementById("e-video").src='../assets/videos/transcript/10a.mp4'
         }
-
+    }
     </script>
 
 </head>
@@ -181,47 +217,47 @@
     <div class="box3">
             <div class="content-videos">
                 <div class="video1">
-                    <video src="../assets/videos/video1.mp4">
+                    <video id="e-video" src="../assets/videos/video1.mp4" controls autoplay>
                     </video>
                 </div>
                 <div class="content-video-stamps">
                     <div class="timestamp-button">
-                        <button onclick="change_text()">00:00:08</button>
+                        <button onclick="changeTxt(1)">00:00:08</button>
                     </div>
                     <div class="timestamp-button">
-                        <button>00:00:20</button>
+                        <button onclick="changeTxt(2)">00:00:20</button>
                     </div>
                     <div class="timestamp-button">
-                        <button>00:00:26</button>
+                        <button onclick="changeTxt(3)">00:00:26</button>
                     </div>
                     <div class="timestamp-button">
-                        <button>00:00:50</button>
+                        <button onclick="changeTxt(4)">00:00:50</button>
                     </div>
                     <div class="timestamp-button">
-                        <button>00:01:02</button>
+                        <button onclick="changeTxt(5)">00:01:02</button>
                     </div>
                     <div class="timestamp-button">
-                        <button>00:01:21</button>
+                        <button onclick="changeTxt(6)">00:01:21</button>
                     </div>
                     <div class="timestamp-button">
-                        <button>00:01:50</button>
+                        <button onclick="changeTxt(7)">00:01:50</button>
                     </div>
                     <div class="timestamp-button">
-                        <button>00:02:11</button>
+                        <button onclick="changeTxt(8)">00:02:11</button>
                     </div>
                     <div class="timestamp-button">
-                        <button>00:02:30</button>
+                        <button onclick="changeTxt(9)">00:02:30</button>
                     </div>
                     <div class="timestamp-button">
-                        <button>00:03:19</button>
+                        <button onclick="changeTxt(10)">00:03:19</button>
                     </div>
                 </div>
             </div>
+            <br>
             <div class="video-transcript">
-                <p id="text-box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus similique quod, at, deleniti maxime excepturi sed in qui atque illo accusantium omnis. Voluptatem suscipit iste fugiat facilis dolores doloremque nobis!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus similique quod, at, deleniti maxime excepturi sed in qui atque illo accusantium omnis. Voluptatem suscipit iste fugiat facilis dolores doloremque nobis!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus similique quod, at, deleniti maxime excepturi sed in qui atque illo accusantium omnis. Voluptatem suscipit iste fugiat facilis dolores doloremque nobis!</p>
+                <p id="text-box">We all know that we have different abilities and dreams, and in order to achieve those dreams, we need to pursue them, right?</p>
             </div>
+            <br>
     </div>
 
 </body>
