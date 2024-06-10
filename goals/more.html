@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
     <link rel="icon" href="../assets/pictures/logo.png">
     <title>MEGI's Corner</title>
     <style>
@@ -118,7 +119,8 @@
         }
 
         .pano-image {
-            margin-left: 340px;
+            display: flex;
+            justify-content: center;
         }
 
         .hover-text {
@@ -159,6 +161,31 @@
 
         .hover-text:hover {
             text-decoration: none;
+        }
+
+        .text-text{
+            height: 550px;
+            overflow-y: scroll;
+            padding: 10px;
+            border-radius: 50px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888; 
+            border-radius: 50px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555; 
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;    
+        }
+
+        ::-webkit-scrollbar-track {
+            margin-top: 30px;
+            margin-bottom: 30px;
         }
 
     </style>
