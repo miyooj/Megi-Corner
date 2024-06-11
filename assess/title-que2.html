@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
+    <link rel="icon" href="../assets/pictures/logo.png">
+    <title>MEGI's Corner</title>
+    <style>
+        html, body {
+            margin: 0; 
+            height: 100%; 
+            overflow: hidden
+        }
+
+        body {
+            font-family: PlayFair Display;
+            color: white;
+            margin-top: 200px;
+            background-color: #3d583d;
+        }
+
+        .title {
+            display: block;
+        }
+
+        .title-number, .title-text, .title-audio {
+            display: inline-block;
+            justify-content: center;
+            vertical-align: middle;
+        }
+
+        .title-number h2{
+            font-family: 'Times New Roman';
+            font-size: 60px;
+            width: 80px;
+            height: 80px;
+            text-align: center;
+            line-height: 75px;
+            border-radius: 50%;
+            background: #7ed957;
+        }
+
+        .title-text h2{
+            font-family: 'Playfair Display';
+            font-size: 30px;
+        }
+
+        .multiple-choice {
+            margin-top: 10px;
+            margin-left: 30px;
+            align-items: center;
+            justify-content: center;
+            vertical-align: middle;
+
+        }
+
+        .selection {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            margin-bottom: 20px;
+            vertical-align: middle;
+        }
+
+        .selection audio {
+            margin-top: 7.5px;
+        }
+
+        .multiple-choice button{
+            font-family: Poppins;
+            font-size: 32px;
+            padding: 10px;
+            border-radius: 50px;
+            border: 0px #7ed957 solid;
+            background-color: rgb(126, 217, 87, 0.6);
+            color: white;
+           
+        }
+
+        .question-element {
+            padding: 30px;
+            margin-left: 80px;
+        }
+
+        .question-element img {
+            object-fit: contain;
+            height: 600px;
+            border-radius: 50px;
+        }
+
+        .correct::after {
+            content: ' - Correct';
+            color: green;
+            font-weight: bold;
+        }
+
+        .incorrect::after {
+            content: ' - Wrong';
+            color: red;
+            font-weight: bold;
+        }
+
+        .disable {
+            pointer-events: none;
+            background-color: #ccc;
+        }
+
+    </style>
+
+    <script>
+        function checkAnswer(choice) {
+            const correctAnswer = 'D';
+            const chosenButton = document.getElementById(choice);
+            const correctButton = document.getElementById(correctAnswer);
+            
+            if (choice === correctAnswer) {
+                chosenButton.classList.add('correct');
+            } else {
+                chosenButton.classList.add('incorrect');
+                correctButton.classList.add('correct');
+            }
+
+            // Disable all buttons after selection
+            document.querySelectorAll('.option').forEach(button => {
+                button.classList.add('disable');
+            });
+
+            // Proceed to the next question after 3 seconds
+            setTimeout(() => {
+                window.location.href = 'title-que3.html';
+            }, 3000);
+        }
+    </script>
+
+</head>
+
+<body>
+    <header class="heading">
+        <a href="../index.html" class="logo">MEGI'S<br>CORNER</a>
+        <nav class="navbar">
+            <a href="../index.html">HOME</a>
+            <a href="../about.html">ABOUT</a>
+            <!-- <a href="../portfolio.html">PORTFOLIO</a> -->
+            <a href="#" style="font-weight: bold;">GOALS</a>
+            <!-- <a href="../journals.html">JOURNALS</a> -->
+        </nav>
+    </header> 
+
+
+    <div class="title">
+        <div class="title-number">
+            <h2>2</h2>
+        </div>
+
+        <div class="title-text">
+            <h2>What is inclusive education?</h2>
+        </div>
+
+        <div class="title-audio">
+            <audio src="../assets/audios/goal questions/a1.m4a" controls>
+        </div>
+    </div>
+
+    <div class="multiple-choice">
+        <div class="selection"> 
+            <button class="option" id="A" onclick="checkAnswer('A')">A. </button>
+            <audio class="audios" src="../assets/audios/goal questions/a1_1.m4a" controls></audio>
+        </div>
+
+        <div class="selection"> 
+            <button class="option" id="B" onclick="checkAnswer('B')">B. </button>
+            <audio class="audios" src="../assets/audios/goal questions/a1_2.m4a" controls></audio>
+        </div>
+
+        <div class="selection"> 
+            <button class="option" id="C" onclick="checkAnswer('C')">C. </button>
+            <audio class="audios" src="../assets/audios/goal questions/a1_3.m4a" controls></audio>
+        </div>
+
+        <div class="selection"> 
+            <button class="option" id="D" onclick="checkAnswer('D')">D. </button>
+            <audio class="audios" src="../assets/audios/goal questions/a1_4.m4a" controls></audio>
+        </div>
+    </div>
+
+
+</body>
+</html>
