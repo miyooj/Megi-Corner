@@ -73,10 +73,9 @@
             margin-left: 80px;
         }
 
-        .question-element iframe {
+        .question-element video {
             object-fit: contain;
             height: 600px;
-            width: 1000px;
             border-radius: 50px;
         }
 
@@ -101,7 +100,7 @@
 
     <script>
         function checkAnswer(choice) {
-            const correctAnswer = 'A';
+            const correctAnswer = 'B';
             const chosenButton = document.getElementById(choice);
             const correctButton = document.getElementById(correctAnswer);
             
@@ -119,7 +118,7 @@
 
             // Proceed to the next question after 3 seconds
             setTimeout(() => {
-                window.location.href = 'title-que4-1.html';
+                window.location.href = 'title-que5.html';
             }, 3000);
         }
     </script>
@@ -141,34 +140,34 @@
 
     <div class="title">
         <div class="title-number">
-            <h2>3</h2>
+            <h2>4</h2>
         </div>
 
         <div class="title-text">
-            <h2>What does the picture depict?</h2>
+            <h2>Where are gifted and talented learners compared?</h2>
         </div>
     </div>
 
     <div class="multiple-choice">
         <div class="selection"> 
-            <button class="option" id="A" onclick="checkAnswer('A')">A. Bullying or Mocking</button>
+            <button class="option" id="A" onclick="checkAnswer('A')">A. Celestial Bodies</button>
         </div>
 
         <div class="selection"> 
-            <button class="option" id="B" onclick="checkAnswer('B')">B. Helping</button>
+            <button class="option" id="B" onclick="checkAnswer('B')">B. Flower and Plants</button>
         </div>
 
         <div class="selection"> 
-            <button class="option" id="C" onclick="checkAnswer('C')">C. Making Friends with</button>
+            <button class="option" id="C" onclick="checkAnswer('C')">C. Weirdos</button>
         </div>
 
         <div class="selection"> 
-            <button class="option" id="D" onclick="checkAnswer('D')">D. Partying</button>
+            <button class="option" id="D" onclick="checkAnswer('D')">D. Celebrity</button>
         </div>
     </div>
 
     <div class="question-element">
-        <iframe allowFullScreen="true" src="https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?frm=1&url=aHR0cHM6Ly9pLnBpbmltZy5jb20vb3JpZ2luYWxzL2E4L2I2LzIwL2E4YjYyMDc2OGYxYmFmMDdkMTExYmZmODg1MzFlMmMwLmpwZw~~&nop=21&color=olive" title="Jigsaw Puzzle">Jigsaw Puzzle</iframe>
+        <video src ="../assets/videos/goal assessment/a1.mp4" controls loop autoplay muted>
     </div>
 
 

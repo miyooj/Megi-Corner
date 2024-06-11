@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
+    <link rel="icon" href="../assets/pictures/logo.png">
+    <title>MEGI's Corner</title>
+    <style>
+        html, body {
+            margin: 0; 
+            height: 100%; 
+            overflow: hidden
+        }
+
+        body {
+            font-family: PlayFair Display;
+            color: white;
+            margin-top: 200px;
+            background-color: #3d583d;
+        }
+
+        .box1 {
+            display: flex;
+            background-color: white;
+            border: 2px black solid;
+            width: 60%;
+            border-radius: 40px;
+
+        }
+
+        .test {
+            height: 300px;
+            width: 300px;
+            object-fit: contain;
+            justify-content: center;
+            margin-left: 58px
+
+        }
+
+        .box {
+            background-color: white;
+            border-radius: 40px;
+            padding: 10px;
+            width: 65%;
+            display: flex;
+            margin-left: 20%;
+        }
+
+
+
+    </style>
+
+    <script>
+        function adjustIframeSize() {
+        var iframe = document.getElementById('word-search-iframe');
+        iframe.width = window.innerWidth;
+        iframe.height = window.innerHeight * 0.8; // Adjust height as needed
+        }
+
+        window.onload = adjustIframeSize;
+        window.onresize = adjustIframeSize;
+    </script>
+
+</head>
+
+<body>
+    <header class="heading">
+        <a href="../index.html" class="logo">MEGI'S<br>CORNER</a>
+        <nav class="navbar">
+            <a href="../index.html">HOME</a>
+            <a href="../about.html">ABOUT</a>
+            <!-- <a href="../portfolio.html">PORTFOLIO</a> -->
+            <a href="#" style="font-weight: bold;">GOALS</a>
+            <!-- <a href="../journals.html">JOURNALS</a> -->
+        </nav>
+    </header> 
+
+    <div class="box">
+        <div class="box1" id="word-search-container">
+            <iframe style="height: 700px;" id="word-search-iframe" src="https://wordsearchlabs.com/embed/580320" frameborder="0"></iframe>
+        </div>
+        
+        <div id="quiz-container">
+            <a href="title-que4.html"><img class="test" src="../assets/pictures/continue.png"></a>
+            <!-- <button class="proceed-btn" onclick="proceed()">Proceed to Quiz</button> -->
+        </div>
+    </div>  
+
+
+</body>
+</html>

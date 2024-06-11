@@ -22,7 +22,11 @@
             background-color: #3d583d;
         }
 
-        .title-number, .title-text {
+        .title {
+            display: block;
+        }
+
+        .title-number, .title-text, .title-audio {
             display: inline-block;
             justify-content: center;
             vertical-align: middle;
@@ -44,17 +48,25 @@
             font-size: 30px;
         }
 
-        .multiple-choice, .question-element {
+        .multiple-choice {
             margin-top: 10px;
             margin-left: 30px;
-            display: inline-block;
-            vertical-align: bottom;
+            align-items: center;
+            justify-content: center;
+            vertical-align: middle;
 
         }
 
         .selection {
+            display: flex;
+            justify-content: center;
             padding: 10px;
             margin-bottom: 20px;
+            vertical-align: middle;
+        }
+
+        .selection audio {
+            margin-top: 7.5px;
         }
 
         .multiple-choice button{
@@ -73,10 +85,9 @@
             margin-left: 80px;
         }
 
-        .question-element iframe {
+        .question-element img {
             object-fit: contain;
             height: 600px;
-            width: 1000px;
             border-radius: 50px;
         }
 
@@ -101,7 +112,7 @@
 
     <script>
         function checkAnswer(choice) {
-            const correctAnswer = 'A';
+            const correctAnswer = 'B';
             const chosenButton = document.getElementById(choice);
             const correctButton = document.getElementById(correctAnswer);
             
@@ -119,7 +130,7 @@
 
             // Proceed to the next question after 3 seconds
             setTimeout(() => {
-                window.location.href = 'title-que4-1.html';
+                window.location.href = 'title-que6.html';
             }, 3000);
         }
     </script>
@@ -141,34 +152,38 @@
 
     <div class="title">
         <div class="title-number">
-            <h2>3</h2>
+            <h2>5</h2>
         </div>
 
         <div class="title-text">
-            <h2>What does the picture depict?</h2>
+            <h2>What is diversity?</h2>
+        </div>
+
+        <div class="title-audio">
+            <audio src="../assets/audios/goal questions/a2.m4a" controls>
         </div>
     </div>
 
     <div class="multiple-choice">
         <div class="selection"> 
-            <button class="option" id="A" onclick="checkAnswer('A')">A. Bullying or Mocking</button>
+            <button class="option" id="A" onclick="checkAnswer('A')">A. A teaching method</button>
+            <audio class="audios" src="../assets/audios/goal questions/a2_1.m4a" controls></audio>
         </div>
 
         <div class="selection"> 
-            <button class="option" id="B" onclick="checkAnswer('B')">B. Helping</button>
+            <button class="option" id="B" onclick="checkAnswer('B')">B. The presence of a wide range of students from different backgrounds</button>
+            <audio class="audios" src="../assets/audios/goal questions/a2_2.m4a" controls></audio>
         </div>
 
         <div class="selection"> 
-            <button class="option" id="C" onclick="checkAnswer('C')">C. Making Friends with</button>
+            <button class="option" id="C" onclick="checkAnswer('C')">C. A branch of study that contains various subjects</button>
+            <audio class="audios" src="../assets/audios/goal questions/a2_3.m4a" controls></audio>
         </div>
 
         <div class="selection"> 
-            <button class="option" id="D" onclick="checkAnswer('D')">D. Partying</button>
+            <button class="option" id="D" onclick="checkAnswer('D')">D. The process of grading students</button>
+            <audio class="audios" src="../assets/audios/goal questions/a2_4.m4a" controls></audio>
         </div>
-    </div>
-
-    <div class="question-element">
-        <iframe allowFullScreen="true" src="https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?frm=1&url=aHR0cHM6Ly9pLnBpbmltZy5jb20vb3JpZ2luYWxzL2E4L2I2LzIwL2E4YjYyMDc2OGYxYmFmMDdkMTExYmZmODg1MzFlMmMwLmpwZw~~&nop=21&color=olive" title="Jigsaw Puzzle">Jigsaw Puzzle</iframe>
     </div>
 
 
